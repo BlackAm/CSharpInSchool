@@ -38,34 +38,78 @@ namespace Project01
 
             if (radioButton1.Checked)
             {
-                sql = "SELECT * FROM 게시글 WHERE 글번호=@글번호";
-                adapter.SelectCommand = new MySqlCommand(sql, conn);
-                adapter.SelectCommand.Parameters.AddWithValue("@글번호", textBox1.Text);
+                if(textBox1.Text!="")
+                {
+                    sql = "SELECT * FROM 게시글 WHERE 글번호=@글번호";
+                    adapter.SelectCommand = new MySqlCommand(sql, conn);
+                    adapter.SelectCommand.Parameters.AddWithValue("@글번호", textBox1.Text);
+                }
+                else
+                {
+                    sql = "SELECT * FROM 게시글";
+                    adapter.SelectCommand = new MySqlCommand(sql, conn);
+                    adapter.SelectCommand.Parameters.AddWithValue("@글번호", textBox1.Text);
+                }
             }
             else if (radioButton2.Checked)
             {
-                sql = "SELECT * FROM 게시글 WHERE 글내용=@글내용";
-                adapter.SelectCommand = new MySqlCommand(sql, conn);
-                adapter.SelectCommand.Parameters.AddWithValue("@글내용", textBox2.Text);
+                if (textBox2.Text != "")
+                {
+                    sql = "SELECT * FROM 게시글 WHERE 글내용=@글내용";
+                    adapter.SelectCommand = new MySqlCommand(sql, conn);
+                    adapter.SelectCommand.Parameters.AddWithValue("@글내용", textBox2.Text);
+                }
+                else
+                {
+                    sql = "SELECT * FROM 게시글";
+                    adapter.SelectCommand = new MySqlCommand(sql, conn);
+                    adapter.SelectCommand.Parameters.AddWithValue("@글내용", textBox2.Text);
+                }
             }
             else if (radioButton3.Checked)
             {
-                sql = "SELECT * FROM 게시글 WHERE 작성일자=@작성일자";
-                adapter.SelectCommand = new MySqlCommand(sql, conn);
-                adapter.SelectCommand.Parameters.AddWithValue("@작성일자", textBox3.Text);
+                if (textBox3.Text != "")
+                {
+                    sql = "SELECT * FROM 게시글 WHERE 작성일자=@작성일자";
+                    adapter.SelectCommand = new MySqlCommand(sql, conn);
+                    adapter.SelectCommand.Parameters.AddWithValue("@작성일자", textBox3.Text);
+                }
+                else
+                {
+                    sql = "SELECT * FROM 게시글";
+                    adapter.SelectCommand = new MySqlCommand(sql, conn);
+                    adapter.SelectCommand.Parameters.AddWithValue("@작성일자", textBox3.Text);
+                }
             }
             else if (radioButton4.Checked)
             {
-                sql = "SELECT * FROM 게시글 WHERE 글제목=@글제목";
-                adapter.SelectCommand = new MySqlCommand(sql, conn);
-                adapter.SelectCommand.Parameters.AddWithValue("@글제목", textBox4.Text);
-
+                if (textBox4.Text != "")
+                {
+                    sql = "SELECT * FROM 게시글 WHERE 글제목=@글제목";
+                    adapter.SelectCommand = new MySqlCommand(sql, conn);
+                    adapter.SelectCommand.Parameters.AddWithValue("@글제목", textBox4.Text);
+                }
+                else
+                {
+                    sql = "SELECT * FROM 게시글";
+                    adapter.SelectCommand = new MySqlCommand(sql, conn);
+                    adapter.SelectCommand.Parameters.AddWithValue("@글제목", textBox4.Text);
+                }
             }
             else if (radioButton5.Checked)
             {
-                sql = "SELECT * FROM 게시글 WHERE 회원아이디=@회원아이디";
-                adapter.SelectCommand = new MySqlCommand(sql, conn);
-                adapter.SelectCommand.Parameters.AddWithValue("@회원아이디", textBox5.Text);
+                if (textBox5.Text != "")
+                {
+                    sql = "SELECT * FROM 게시글 WHERE 회원아이디=@회원아이디";
+                    adapter.SelectCommand = new MySqlCommand(sql, conn);
+                    adapter.SelectCommand.Parameters.AddWithValue("@회원아이디", textBox5.Text);
+                }
+                else
+                {
+                    sql = "SELECT * FROM 게시글";
+                    adapter.SelectCommand = new MySqlCommand(sql, conn);
+                    adapter.SelectCommand.Parameters.AddWithValue("@회원아이디", textBox5.Text);
+                }
             }
             try
             {

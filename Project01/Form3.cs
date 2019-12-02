@@ -38,34 +38,83 @@ namespace Project01
 
             if (radioButton1.Checked)
             {
-                sql = "SELECT * FROM 상품 WHERE 상품번호=@상품번호";
-                adapter.SelectCommand = new MySqlCommand(sql, conn);
-                adapter.SelectCommand.Parameters.AddWithValue("@상품번호", textBox1.Text);
+                if(textBox1.Text!="")
+                {
+                    sql = "SELECT * FROM 상품 WHERE 상품번호=@상품번호";
+                    adapter.SelectCommand = new MySqlCommand(sql, conn);
+                    adapter.SelectCommand.Parameters.AddWithValue("@상품번호", textBox1.Text);
+                }
+                else
+                {
+                    sql = "SELECT * FROM 상품";
+                    adapter.SelectCommand = new MySqlCommand(sql, conn);
+                    adapter.SelectCommand.Parameters.AddWithValue("@상품번호", textBox1.Text);
+                }
             }
             else if (radioButton2.Checked)
             {
-                sql = "SELECT * FROM 상품 WHERE 상품명=@상품명";
-                adapter.SelectCommand = new MySqlCommand(sql, conn);
-                adapter.SelectCommand.Parameters.AddWithValue("@상품명", textBox2.Text);
+                if (textBox2.Text != "")
+                {
+                    sql = "SELECT * FROM 상품 WHERE 상품명=@상품명";
+                    adapter.SelectCommand = new MySqlCommand(sql, conn);
+                    adapter.SelectCommand.Parameters.AddWithValue("@상품명", textBox2.Text);
+                }
+                else
+                {
+                    sql = "SELECT * FROM 상품";
+                    adapter.SelectCommand = new MySqlCommand(sql, conn);
+                    adapter.SelectCommand.Parameters.AddWithValue("@상품명", textBox2.Text);
+                }
+                
             }
             else if (radioButton3.Checked)
             {
-                sql = "SELECT * FROM 상품 WHERE 재고량=@재고량";
-                adapter.SelectCommand = new MySqlCommand(sql, conn);
-                adapter.SelectCommand.Parameters.AddWithValue("@재고량", textBox3.Text);
+                if (textBox3.Text != "")
+                {
+                    sql = "SELECT * FROM 상품 WHERE 재고량=@재고량";
+                    adapter.SelectCommand = new MySqlCommand(sql, conn);
+                    adapter.SelectCommand.Parameters.AddWithValue("@재고량", textBox3.Text);
+                }
+                else
+                {
+                    sql = "SELECT * FROM 상품";
+                    adapter.SelectCommand = new MySqlCommand(sql, conn);
+                    adapter.SelectCommand.Parameters.AddWithValue("@재고량", textBox3.Text);
+                }
+                
             }
             else if (radioButton4.Checked)
             {
-                sql = "SELECT * FROM 상품 WHERE 단가=@단가";
-                adapter.SelectCommand = new MySqlCommand(sql, conn);
-                adapter.SelectCommand.Parameters.AddWithValue("@단가", textBox4.Text);
+                if (textBox4.Text != "")
+                {
+                    sql = "SELECT * FROM 상품 WHERE 단가=@단가";
+                    adapter.SelectCommand = new MySqlCommand(sql, conn);
+                    adapter.SelectCommand.Parameters.AddWithValue("@단가", textBox4.Text);
+                }
+                else
+                {
+                    sql = "SELECT * FROM 상품";
+                    adapter.SelectCommand = new MySqlCommand(sql, conn);
+                    adapter.SelectCommand.Parameters.AddWithValue("@단가", textBox4.Text);
+                }
+                
 
             }
             else if (radioButton5.Checked)
             {
-                sql = "SELECT * FROM 상품 WHERE 제조업체명=@제조업체명";
-                adapter.SelectCommand = new MySqlCommand(sql, conn);
-                adapter.SelectCommand.Parameters.AddWithValue("@제조업체명", textBox5.Text);
+                if (textBox5.Text != "")
+                {
+                    sql = "SELECT * FROM 상품 WHERE 제조업체명=@제조업체명";
+                    adapter.SelectCommand = new MySqlCommand(sql, conn);
+                    adapter.SelectCommand.Parameters.AddWithValue("@제조업체명", textBox5.Text);
+                }
+                else
+                {
+                    sql = "SELECT * FROM 상품";
+                    adapter.SelectCommand = new MySqlCommand(sql, conn);
+                    adapter.SelectCommand.Parameters.AddWithValue("@제조업체명", textBox5.Text);
+                }
+                
             }
             try
             {

@@ -39,52 +39,124 @@ namespace Project01
 
             if (radioButton1.Checked)
             {
-                sql = "SELECT * FROM 회원 WHERE 회원번호=@회원번호";
-                adapter.SelectCommand = new MySqlCommand(sql, conn);
-                adapter.SelectCommand.Parameters.AddWithValue("@회원번호", textBox1.Text);
+                if(textBox1.Text!="")
+                {
+                    sql = "SELECT * FROM 회원 WHERE 회원번호=@회원번호";
+                    adapter.SelectCommand = new MySqlCommand(sql, conn);
+                    adapter.SelectCommand.Parameters.AddWithValue("@회원번호", textBox1.Text);
+                }
+                else
+                {
+                    sql = "SELECT * FROM 회원";
+                    adapter.SelectCommand = new MySqlCommand(sql, conn);
+                    adapter.SelectCommand.Parameters.AddWithValue("@회원번호", textBox1.Text);
+                }
             }
             else if(radioButton2.Checked)
             {
-                sql = "SELECT * FROM 회원 WHERE 회원아이디=@회원아이디";
-                adapter.SelectCommand = new MySqlCommand(sql, conn);
-                adapter.SelectCommand.Parameters.AddWithValue("@회원아이디", textBox2.Text);
+                if(textBox2.Text!="")
+                {
+                    sql = "SELECT * FROM 회원 WHERE 회원아이디=@회원아이디";
+                    adapter.SelectCommand = new MySqlCommand(sql, conn);
+                    adapter.SelectCommand.Parameters.AddWithValue("@회원아이디", textBox2.Text);
+                }
+                else
+                {
+                    sql = "SELECT * FROM 회원";
+                    adapter.SelectCommand = new MySqlCommand(sql, conn);
+                    adapter.SelectCommand.Parameters.AddWithValue("@회원아이디", textBox2.Text);
+                }
             }
             else if (radioButton3.Checked)
             {
-                sql = "SELECT * FROM 회원 WHERE 비밀번호=@비밀번호";
-                adapter.SelectCommand = new MySqlCommand(sql, conn);
-                adapter.SelectCommand.Parameters.AddWithValue("@비밀번호", textBox3.Text);
+                if(textBox3.Text!="")
+                {
+                    sql = "SELECT * FROM 회원 WHERE 비밀번호=@비밀번호";
+                    adapter.SelectCommand = new MySqlCommand(sql, conn);
+                    adapter.SelectCommand.Parameters.AddWithValue("@비밀번호", textBox3.Text);
+                }
+                else
+                {
+                    sql = "SELECT * FROM 회원";
+                    adapter.SelectCommand = new MySqlCommand(sql, conn);
+                    adapter.SelectCommand.Parameters.AddWithValue("@비밀번호", textBox3.Text);
+                }
             }
             else if (radioButton4.Checked)
             {
-                sql = "SELECT * FROM 회원 WHERE 이름=@이름";
-                adapter.SelectCommand = new MySqlCommand(sql, conn);
-                adapter.SelectCommand.Parameters.AddWithValue("@이름", textBox4.Text);
-                
+                if(textBox4.Text!="")
+                {
+                    sql = "SELECT * FROM 회원 WHERE 이름=@이름";
+                    adapter.SelectCommand = new MySqlCommand(sql, conn);
+                    adapter.SelectCommand.Parameters.AddWithValue("@이름", textBox4.Text);
+                }
+                else
+                {
+                    sql = "SELECT * FROM 회원";
+                    adapter.SelectCommand = new MySqlCommand(sql, conn);
+                    adapter.SelectCommand.Parameters.AddWithValue("@이름", textBox4.Text);
+                }
             }
             else if (radioButton5.Checked)
             {
-                sql = "SELECT * FROM 회원 WHERE 나이=@나이";
-                adapter.SelectCommand = new MySqlCommand(sql, conn);
-                adapter.SelectCommand.Parameters.AddWithValue("@나이", textBox5.Text);
+                if (textBox5.Text != "")
+                {
+                    sql = "SELECT * FROM 회원 WHERE 나이=@나이";
+                    adapter.SelectCommand = new MySqlCommand(sql, conn);
+                    adapter.SelectCommand.Parameters.AddWithValue("@나이", textBox5.Text);
+                }
+                else
+                {
+                    sql = "SELECT * FROM 회원";
+                    adapter.SelectCommand = new MySqlCommand(sql, conn);
+                    adapter.SelectCommand.Parameters.AddWithValue("@나이", textBox5.Text);
+                }
             }
             else if (radioButton6.Checked)
             {
-                sql = "SELECT * FROM 회원 WHERE 직업=@직업";
-                adapter.SelectCommand = new MySqlCommand(sql, conn);
-                adapter.SelectCommand.Parameters.AddWithValue("@직업", textBox6.Text);
+                if (textBox6.Text != "")
+                {
+                    sql = "SELECT * FROM 회원 WHERE 직업=@직업";
+                    adapter.SelectCommand = new MySqlCommand(sql, conn);
+                    adapter.SelectCommand.Parameters.AddWithValue("@직업", textBox6.Text);
+                }
+                else
+                {
+                    sql = "SELECT * FROM 회원";
+                    adapter.SelectCommand = new MySqlCommand(sql, conn);
+                    adapter.SelectCommand.Parameters.AddWithValue("@직업", textBox6.Text);
+                }
             }
             else if (radioButton7.Checked)
             {
-                sql = "SELECT * FROM 회원 WHERE 등급=@등급";
-                adapter.SelectCommand = new MySqlCommand(sql, conn);
-                adapter.SelectCommand.Parameters.AddWithValue("@등급", textBox7.Text);
+                if (textBox7.Text != "")
+                {
+                    sql = "SELECT * FROM 회원 WHERE 등급=@등급";
+                    adapter.SelectCommand = new MySqlCommand(sql, conn);
+                    adapter.SelectCommand.Parameters.AddWithValue("@등급", textBox7.Text);
+                }
+                else
+                {
+                    sql = "SELECT * FROM 회원";
+                    adapter.SelectCommand = new MySqlCommand(sql, conn);
+                    adapter.SelectCommand.Parameters.AddWithValue("@등급", textBox7.Text);
+                }
+                
             }
             else if (radioButton8.Checked)
             {
-                sql = "SELECT * FROM 회원 WHERE 적립금=@적립금";
-                adapter.SelectCommand = new MySqlCommand(sql, conn);
-                adapter.SelectCommand.Parameters.AddWithValue("@적립금", textBox8.Text);
+                if (textBox8.Text != "")
+                {
+                    sql = "SELECT * FROM 회원 WHERE 적립금=@적립금";
+                    adapter.SelectCommand = new MySqlCommand(sql, conn);
+                    adapter.SelectCommand.Parameters.AddWithValue("@적립금", textBox8.Text);
+                }
+                else
+                {
+                    sql = "SELECT * FROM 회원";
+                    adapter.SelectCommand = new MySqlCommand(sql, conn);
+                    adapter.SelectCommand.Parameters.AddWithValue("@적립금", textBox8.Text);
+                }
             }
             try
             {

@@ -5,7 +5,7 @@ VisualStudioVersion = 15.0.28307.852
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WinFormProject", "WinFormProject\WinFormProject.csproj", "{61F4552F-7C4D-4A9B-A30A-EA72B3C0BC0E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Project01", "..\WInFromDB02\Project01\Project01.csproj", "{3102715D-8CCB-4C10-BE4D-C02B79A5E320}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Project01", "Project01\Project01.csproj", "{3102715D-8CCB-4C10-BE4D-C02B79A5E320}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
