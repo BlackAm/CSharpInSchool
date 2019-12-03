@@ -223,7 +223,7 @@ namespace Project01
 
         private void Form4_Load_1(object sender, EventArgs e)
         {
-            string connStr = "server=localhost;port=3306;database=한빛마트;uid=root;pwd=""; // pwd 입력
+            string connStr = "server=localhost;port=3306;database=한빛마트;uid=root;pwd="; // pwd 입력
             conn = new MySqlConnection(connStr);
 
             adapter = new MySqlDataAdapter("SELECT * FROM 제조업체", conn);
